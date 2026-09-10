@@ -1,0 +1,1140 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAI Studio – AI Tools, Technology & Updates</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="WebAI Studio – AI Tools, Technology & Updates">
+    <meta name="description" content="WebAI Studio helps you discover useful AI tools, technology updates, AI tips, tutorials, digital resources, and practical ways to use artificial intelligence.">
+    <meta name="keywords" content="WebAI Studio, WebAIStudioo, AI tools, AI technology, artificial intelligence, AI tips, AI tutorials, technology updates, AI resources">
+    <meta name="author" content="WebAI Studio">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t.me/WebAIStudioo">
+    <meta property="og:title" content="WebAI Studio – AI Tools, Technology & Updates">
+    <meta property="og:description" content="Explore AI. Learn Technology. Stay Ahead. Join our premier community for practical AI tools, tips, and technology guides.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="WebAI Studio – AI Tools, Technology & Updates">
+    <meta property="twitter:description" content="Explore AI. Learn Technology. Stay Ahead. Discover the best AI workflows & guides.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#030712',
+                            card: '#0B0F19',
+                            border: '#1E293B',
+                            cyan: '#06B6D4',
+                            blue: '#3B82F6',
+                            purple: '#8B5CF6',
+                            neonPink: '#EC4899',
+                            electricBlue: '#38BDF8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'spin-slow': 'spin 18s linear infinite',
+                        'shimmer': 'shimmer 2.5s infinite linear',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-12px) rotate(2deg)' },
+                        },
+                        glow: {
+                            '0%': { opacity: '0.5', filter: 'drop-shadow(0 0 15px rgba(56, 189, 248, 0.4))' },
+                            '100%': { opacity: '1', filter: 'drop-shadow(0 0 35px rgba(139, 92, 246, 0.8))' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Glassmorphism & Animations -->
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+
+        /* Ambient Glow Grid */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        .glass-card {
+            background: rgba(11, 15, 25, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card-hover:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.25);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38BDF8 0%, #8B5CF6 50%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #22D3EE 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glowing Cursor Follower */
+        #cursor-glow {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(139, 92, 246, 0.03) 40%, transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+            z-index: 10;
+        }
+
+        /* Scroll Reveal Utility Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Respect Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .animate-float, .animate-spin-slow, .animate-glow, .animate-pulse-slow {
+                animation: none !important;
+            }
+            #cursor-glow {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#030712] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-cyan-500 selection:text-black min-h-screen flex flex-col justify-between">
+
+    <!-- Cursor Glow (Desktop) -->
+    <div id="cursor-glow" class="hidden md:block"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 z-50 w-0 transition-all duration-150"></div>
+
+    <!-- Sticky Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <nav class="flex items-center justify-between rounded-2xl p-3 px-5 transition-all duration-300" id="nav-container">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-blue-600 to-purple-600 flex items-center justify-center p-[1px] shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+                        <div class="w-full h-full bg-[#0B0F19] rounded-[11px] flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-cyan-400 text-lg group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+                        WebAI <span class="text-cyan-400">Studio</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#home" class="hover:text-cyan-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Home</a>
+                    <a href="#about" class="hover:text-cyan-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">About</a>
+                    <a href="#features" class="hover:text-cyan-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">AI Tools</a>
+                    <a href="#categories" class="hover:text-cyan-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Universe</a>
+                    <a href="#why-us" class="hover:text-cyan-400 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Why Us</a>
+                </div>
+
+                <!-- Right Telegram CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer" 
+                       class="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-sm focus:outline-none">
+                        <span class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 animate-shimmer"></span>
+                        <span class="relative px-5 py-2.5 rounded-[11px] bg-[#0B0F19] transition-all duration-300 flex items-center gap-2 text-white group-hover:bg-opacity-80">
+                            <i class="fa-brands fa-telegram text-cyan-400 text-base group-hover:scale-125 transition-transform"></i>
+                            <span>Join Telegram</span>
+                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden max-w-7xl mx-auto mt-2 transition-all duration-300">
+            <div class="glass-card rounded-2xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
+                <a href="#home" class="mobile-nav-link text-slate-200 hover:text-cyan-400 font-medium py-2 border-b border-slate-800/50">Home</a>
+                <a href="#about" class="mobile-nav-link text-slate-200 hover:text-cyan-400 font-medium py-2 border-b border-slate-800/50">About</a>
+                <a href="#features" class="mobile-nav-link text-slate-200 hover:text-cyan-400 font-medium py-2 border-b border-slate-800/50">AI Tools</a>
+                <a href="#categories" class="mobile-nav-link text-slate-200 hover:text-cyan-400 font-medium py-2 border-b border-slate-800/50">Universe</a>
+                <a href="#why-us" class="mobile-nav-link text-slate-200 hover:text-cyan-400 font-medium py-2 border-b border-slate-800/50">Why Us</a>
+                
+                <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer" 
+                   class="mt-2 w-full text-center py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/25">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                    <span>Join WebAI Studio Telegram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 lg:pt-44 pb-20 md:pb-32 overflow-hidden bg-grid-pattern">
+        
+        <!-- Ambient Radial Glow Effects in Background -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/15 via-blue-600/10 to-purple-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[350px] h-[350px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <!-- Canvas Background Particles -->
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left reveal active">
+                    
+                    <!-- Small Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 shadow-sm shadow-cyan-500/10 hover:border-cyan-400 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        <span>✦ AI & TECHNOLOGY COMMUNITY</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-[1.1] mb-6">
+                        Explore AI.<br>
+                        <span class="text-gradient">Learn Technology.</span><br>
+                        <span class="text-slate-200">Stay Ahead.</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-slate-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mb-8">
+                        Discover powerful AI tools, technology updates, practical tutorials, digital resources, and smarter ways to use artificial intelligence in daily life and business.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
+                        <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer"
+                           class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-base shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3 group">
+                            <span>🚀 Join WebAIStudioo</span>
+                            <i class="fa-solid fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="#features" 
+                           class="px-8 py-4 rounded-xl glass-card text-slate-200 hover:text-white font-semibold text-base border border-slate-700/80 hover:border-cyan-500/50 hover:bg-slate-800/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
+                            <span>Explore AI Tools</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-cyan-400 animate-bounce"></i>
+                        </a>
+                    </div>
+
+                    <!-- Live Community Trust Bar -->
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-800/80 w-full max-w-lg">
+                        <div class="flex -space-x-2 overflow-hidden">
+                            <span class="inline-block h-9 w-9 rounded-full ring-2 ring-slate-900 bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center text-xs font-bold text-white">AI</span>
+                            <span class="inline-block h-9 w-9 rounded-full ring-2 ring-slate-900 bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-xs font-bold text-white">WS</span>
+                            <span class="inline-block h-9 w-9 rounded-full ring-2 ring-slate-900 bg-gradient-to-tr from-emerald-400 to-teal-600 flex items-center justify-center text-xs font-bold text-white">TG</span>
+                        </div>
+                        <div>
+                            <div class="text-xs font-semibold text-slate-200 flex items-center gap-1.5">
+                                <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                                <span>Active Telegram Ecosystem</span>
+                            </div>
+                            <p class="text-xs text-slate-400">Daily curated AI guides & breaking updates</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Futuristic Visual / Animated AI Neural Core -->
+                <div class="lg:col-span-5 relative flex items-center justify-center reveal delay-200">
+                    <div class="relative w-full max-w-[420px] aspect-square rounded-3xl glass-card p-6 border border-cyan-500/20 shadow-2xl flex flex-col items-center justify-center overflow-hidden group">
+                        
+                        <!-- Rotating Background Glowing Orbs -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-transparent rounded-3xl animate-spin-slow"></div>
+
+                        <!-- Central Holographic Orb -->
+                        <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-gradient-to-tr from-cyan-500 via-blue-600 to-purple-600 p-[2px] animate-float shadow-[0_0_50px_rgba(6,182,212,0.4)]">
+                            <div class="w-full h-full bg-[#070C18] rounded-full flex flex-col items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
+                                <i class="fa-solid fa-microchip text-5xl sm:text-6xl text-cyan-400 mb-2 animate-pulse"></i>
+                                <span class="font-display font-extrabold text-xs tracking-widest text-slate-300 uppercase">NEURAL ENGINE</span>
+                                <span class="text-[10px] text-cyan-400 font-mono mt-1">ONLINE • v2.6</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Cards -->
+                        <div class="absolute top-6 left-4 glass-card p-3 rounded-xl border border-cyan-500/30 shadow-lg animate-float" style="animation-delay: 1s;">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-slate-200">
+                                <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                                <span>Prompt Engineering</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-8 right-4 glass-card p-3 rounded-xl border border-purple-500/30 shadow-lg animate-float" style="animation-delay: 2s;">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-slate-200">
+                                <i class="fa-solid fa-bolt text-purple-400"></i>
+                                <span>Smart Workflows</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-6 left-6 glass-card p-2.5 rounded-xl border border-blue-500/30 shadow-lg animate-float" style="animation-delay: 3s;">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-slate-200">
+                                <i class="fa-solid fa-code text-blue-400"></i>
+                                <span>AI Code Assistants</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Scroll Indicator -->
+            <div class="mt-16 sm:mt-24 flex flex-col items-center justify-center gap-2 text-slate-500 text-xs font-mono tracking-widest uppercase">
+                <span>SCROLL TO EXPLORE ↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 md:py-32 relative border-t border-slate-900 bg-[#070C18]/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Narrative -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                        ABOUT WEBAI STUDIO
+                    </div>
+                    <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-6 leading-tight">
+                        Welcome to <span class="text-gradient">WebAI Studio</span>
+                    </h2>
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
+                        WebAI Studio is an AI and technology community focused on making modern technology simple, practical, and immediately useful for everyone.
+                    </p>
+                    <p class="text-slate-400 text-base leading-relaxed mb-8">
+                        We discover useful tools, explain emerging technologies, share practical tutorials, and help people get more value from artificial intelligence without getting lost in technical complexity.
+                    </p>
+
+                    <!-- Key Pillars List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800">
+                            <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Daily AI Discoveries</h4>
+                                <p class="text-xs text-slate-400">Handpicked AI tools tested for utility.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800">
+                            <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Actionable Guides</h4>
+                                <p class="text-xs text-slate-400">Step-by-step prompts & workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Stats Counter Grid -->
+                <div class="lg:col-span-5 reveal delay-200">
+                    <div class="grid grid-cols-2 gap-4">
+                        
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center hover:border-cyan-500/40 transition-colors">
+                            <div class="text-cyan-400 text-3xl font-display font-extrabold mb-1" id="stat-1">100+</div>
+                            <div class="text-slate-300 text-sm font-medium">Curated AI Tools</div>
+                            <div class="text-slate-500 text-xs mt-1">Updated Weekly</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center hover:border-purple-500/40 transition-colors">
+                            <div class="text-purple-400 text-3xl font-display font-extrabold mb-1" id="stat-2">24/7</div>
+                            <div class="text-slate-300 text-sm font-medium">Telegram Channel</div>
+                            <div class="text-slate-500 text-xs mt-1">@WebAIStudioo</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center hover:border-blue-500/40 transition-colors">
+                            <div class="text-blue-400 text-3xl font-display font-extrabold mb-1" id="stat-3">100%</div>
+                            <div class="text-slate-300 text-sm font-medium">Practical Content</div>
+                            <div class="text-slate-500 text-xs mt-1">Zero fluff guaranteed</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center hover:border-pink-500/40 transition-colors">
+                            <div class="text-pink-400 text-3xl font-display font-extrabold mb-1" id="stat-4">⚡ Instant</div>
+                            <div class="text-slate-300 text-sm font-medium">Tech Updates</div>
+                            <div class="text-slate-500 text-xs mt-1">Stay ahead daily</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE CARDS SECTION -->
+    <section id="features" class="py-20 md:py-32 relative bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                    CORE FOCUS AREAS
+                </div>
+                <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+                    Master Artificial Intelligence
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Everything you need to navigate the rapidly evolving digital landscape in one structured platform.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: AI Tools -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-slate-800 relative group overflow-hidden reveal">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            🤖
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                            AI TOOLS
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Discover powerful AI tools for productivity, creativity, education, business, coding, images, video, and everyday tasks.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-cyan-400">
+                        <span>Explore Directory</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: AI Tips -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-slate-800 relative group overflow-hidden reveal delay-100">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            ⚡
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-purple-400 transition-colors">
+                            AI TIPS
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Learn practical AI techniques, prompts, shortcuts, and smarter ways to work with modern language models.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-purple-400">
+                        <span>Get Shortcuts</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3: Technology -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-slate-800 relative group overflow-hidden reveal delay-200">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            💻
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-blue-400 transition-colors">
+                            TECHNOLOGY
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Stay updated with useful technology, apps, websites, digital trends, software news, and breakthrough innovations.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-blue-400">
+                        <span>Read Trends</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4: Tutorials -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-slate-800 relative group overflow-hidden reveal delay-300">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            📚
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-pink-400 transition-colors">
+                            TUTORIALS
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Learn AI and technology through simple, practical, step-by-step guides built for absolute clarity.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-pink-400">
+                        <span>Start Learning</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AI CATEGORIES UNIVERSE -->
+    <section id="categories" class="py-20 md:py-32 relative bg-[#070C18]/80 border-y border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                    DISCOVER BY DOMAIN
+                </div>
+                <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+                    Explore the <span class="text-gradient">AI Universe</span>
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Select a domain to uncover tailored AI tools and workflow templates.
+                </p>
+            </div>
+
+            <!-- Category Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal" data-category="writing">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">✍️</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-cyan-400 transition-colors">AI Writing</h4>
+                        <p class="text-xs text-slate-400">Copy & Articles</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-purple-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-100" data-category="images">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">🎨</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-purple-400 transition-colors">AI Images</h4>
+                        <p class="text-xs text-slate-400">Art & Editing</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-pink-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-150" data-category="video">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">🎬</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-pink-400 transition-colors">AI Video</h4>
+                        <p class="text-xs text-slate-400">Generation & FX</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-blue-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-200" data-category="coding">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">💻</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-blue-400 transition-colors">AI Coding</h4>
+                        <p class="text-xs text-slate-400">Dev & Refactoring</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-emerald-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-250" data-category="education">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">🧠</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-emerald-400 transition-colors">AI Education</h4>
+                        <p class="text-xs text-slate-400">Research & Math</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-amber-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-300" data-category="productivity">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">⚡</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-amber-400 transition-colors">AI Productivity</h4>
+                        <p class="text-xs text-slate-400">Notes & Planning</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-indigo-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-350" data-category="business">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">💼</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-indigo-400 transition-colors">AI Business</h4>
+                        <p class="text-xs text-slate-400">CRM & Strategy</p>
+                    </div>
+                </div>
+
+                <div class="category-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-400/50 hover:bg-slate-900/60 transition-all duration-300 cursor-pointer flex items-center gap-4 group reveal delay-400" data-category="automation">
+                    <span class="text-3xl group-hover:scale-125 transition-transform">🤖</span>
+                    <div>
+                        <h4 class="font-display font-semibold text-white group-hover:text-cyan-400 transition-colors">AI Automation</h4>
+                        <p class="text-xs text-slate-400">Bots & Agents</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Dynamic Interactive Tool Showcase Preview -->
+            <div id="category-preview" class="mt-12 glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-xs font-mono uppercase text-cyan-400 tracking-wider">FEATURED REPOSITORY</span>
+                    <h3 class="font-display font-bold text-xl sm:text-2xl text-white mt-1" id="preview-title">AI Workflow Breakdown</h3>
+                    <p class="text-slate-300 text-sm mt-2 max-w-xl" id="preview-desc">
+                        Click any domain above to preview hand-curated tools shared daily on our official Telegram channel.
+                    </p>
+                </div>
+                <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer" 
+                   class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm whitespace-nowrap shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all">
+                    Get Telegram Updates →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURED SECTION -->
+    <section class="py-20 md:py-32 relative overflow-hidden bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
+                
+                <!-- Background Accent Glow -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                            FUTURE INSIGHTS
+                        </div>
+                        <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-6 leading-tight">
+                            The Future Is <span class="text-gradient">Already Here.</span>
+                        </h2>
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+                            Artificial intelligence is changing how we create, learn, work, and solve problems. WebAI Studio helps you discover the tools and knowledge needed to stay ahead in an automated world.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer"
+                               class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all flex items-center gap-2">
+                                <i class="fa-brands fa-telegram text-base"></i>
+                                <span>Join Telegram Channel</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual Matrix Graphic -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm aspect-square glass-card rounded-2xl border border-slate-700/60 p-6 flex flex-col justify-between overflow-hidden shadow-2xl">
+                            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                                </div>
+                                <span class="text-[10px] font-mono text-cyan-400">WEBAI-LIVE-NODE</span>
+                            </div>
+
+                            <div class="font-mono text-xs text-slate-300 space-y-2 py-4">
+                                <p class="text-cyan-400">&gt; Initializing WebAI Studio core...</p>
+                                <p class="text-purple-400">&gt; Indexing new AI models...</p>
+                                <p class="text-emerald-400">&gt; Status: 100% Operational</p>
+                                <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] text-slate-300 mt-3">
+                                    <span class="text-amber-400">Tip of the Day:</span> Combine ChatGPT deep prompts with Midjourney v6 parameters for hyper-realistic renders.
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400">
+                                <span>@WebAIStudioo</span>
+                                <span class="flex items-center gap-1.5 text-cyan-400">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Live Feed
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY WEBAI STUDIO -->
+    <section id="why-us" class="py-20 md:py-32 relative bg-[#070C18]/60 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                    OUR ADVANTAGE
+                </div>
+                <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+                    Why WebAI Studio?
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Four reasons why tech enthusiasts and professionals choose us for their daily AI updates.
+                </p>
+            </div>
+
+            <!-- 4 Grid Blocks -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Block 1 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 relative reveal">
+                    <div class="text-4xl font-display font-black text-cyan-400/20 mb-4">01</div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">SIMPLE</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Complex technology explained simply. No heavy jargon or overwhelming technical fluff.
+                    </p>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 relative reveal delay-100">
+                    <div class="text-4xl font-display font-black text-purple-400/20 mb-4">02</div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">USEFUL</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Practical tools, workflows, and information you can actually use in real work immediately.
+                    </p>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 relative reveal delay-200">
+                    <div class="text-4xl font-display font-black text-blue-400/20 mb-4">03</div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">UPDATED</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Stay informed about the rapidly changing AI landscape without missing breaking developments.
+                    </p>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="glass-card glass-card-hover rounded-2xl p-6 border border-slate-800 relative reveal delay-300">
+                    <div class="text-4xl font-display font-black text-pink-400/20 mb-4">04</div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">COMMUNITY</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Connect with the WebAI Studio community directly through our interactive Telegram channel.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TELEGRAM CTA SECTION -->
+    <section class="py-20 md:py-32 relative bg-grid-pattern">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="glass-card rounded-3xl p-8 sm:p-14 border border-cyan-500/30 text-center relative overflow-hidden shadow-[0_0_80px_rgba(6,182,212,0.15)] reveal">
+                
+                <!-- Glowing Orb Behind CTA -->
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-600/10 to-purple-600/10 pointer-events-none"></div>
+
+                <!-- Telegram Animated Icon -->
+                <div class="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-[1px] shadow-xl shadow-cyan-500/30 mb-8 animate-float">
+                    <div class="w-full h-full bg-[#0B0F19] rounded-[15px] flex items-center justify-center">
+                        <i class="fa-brands fa-telegram text-cyan-400 text-4xl"></i>
+                    </div>
+                </div>
+
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+                    Join the <span class="text-gradient">WebAI Studio</span> Community
+                </h2>
+
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Get the latest AI tools, technology updates, tips, tutorials, and useful resources directly on Telegram.
+                </p>
+
+                <!-- Big CTA Button -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer"
+                       class="w-full sm:w-auto px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-extrabold text-base sm:text-lg shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 group">
+                        <i class="fa-brands fa-telegram text-2xl group-hover:rotate-12 transition-transform"></i>
+                        <span>JOIN WEBAI STUDIO ON TELEGRAM</span>
+                    </a>
+                </div>
+
+                <div class="mt-6 font-mono text-sm text-cyan-400 font-semibold tracking-wide">
+                    @WebAIStudioo
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL HERO / CTA SECTION -->
+    <section class="py-20 relative bg-[#030712] border-t border-slate-900 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
+            <h2 class="font-display font-extrabold text-4xl sm:text-6xl text-white tracking-tight leading-tight mb-4">
+                Stay Curious.<br>
+                <span class="text-gradient">Keep Learning.</span><br>
+                Explore AI.
+            </h2>
+            <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-8">
+                Your journey into artificial intelligence and modern technology starts right here.
+            </p>
+            <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-slate-900 border border-slate-700 text-white font-bold hover:border-cyan-400 hover:text-cyan-400 transition-all shadow-lg">
+                <span>Join WebAIStudioo</span>
+                <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#02050E] border-t border-slate-900 pt-16 pb-12 relative text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-900">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-6">
+                    <a href="#home" class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
+                            🧠
+                        </div>
+                        <span class="font-display font-bold text-lg text-white">WebAI Studio</span>
+                    </a>
+                    <p class="text-slate-400 text-sm max-w-sm mb-4">
+                        Explore AI. Learn Technology. Stay Ahead.
+                    </p>
+                    <p class="text-xs text-slate-500">
+                        Empowering individuals with actionable AI knowledge & daily modern technology guides.
+                    </p>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div class="md:col-span-3">
+                    <h4 class="font-display font-semibold text-white mb-4 uppercase text-xs tracking-wider">Quick Navigation</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-cyan-400 transition-colors">About</a></li>
+                        <li><a href="#features" class="hover:text-cyan-400 transition-colors">AI Tools</a></li>
+                        <li><a href="#categories" class="hover:text-cyan-400 transition-colors">Universe</a></li>
+                        <li><a href="#why-us" class="hover:text-cyan-400 transition-colors">Why Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community & Telegram -->
+                <div class="md:col-span-3">
+                    <h4 class="font-display font-semibold text-white mb-4 uppercase text-xs tracking-wider">Community Channel</h4>
+                    <p class="text-xs text-slate-400 mb-3">Official Telegram Handle:</p>
+                    <a href="https://t.me/WebAIStudioo" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 font-mono text-cyan-400 hover:underline text-sm font-semibold mb-4">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span>@WebAIStudioo</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Back to Top -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© 2026 WebAI Studio. All rights reserved.</p>
+                
+                <a href="#home" aria-label="Back to top" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                    <span>Back to top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT ANIMATION SYSTEM -->
+    <script>
+        // Check reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // -------------------------------------------------------------
+        // 1. HERO PARTICLES & NEURAL NET CANVAS ANIMATION
+        // -------------------------------------------------------------
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas ? canvas.getContext('2d') : null;
+        let particles = [];
+        let animationFrameId;
+
+        function resizeCanvas() {
+            if (!canvas) return;
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.6;
+                this.vy = (Math.random() - 0.5) * 0.6;
+                this.radius = Math.random() * 2 + 1;
+                this.color = Math.random() > 0.5 ? '#06b6d4' : '#8b5cf6';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                if (!ctx) return;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = 0.6;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            if (!canvas) return;
+            particles = [];
+            const count = Math.min(Math.floor(window.innerWidth / 15), 60);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateCanvas() {
+            if (!ctx || prefersReducedMotion) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Connect nearby particles with glowing lines
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = '#06b6d4';
+                        ctx.globalAlpha = (1 - dist / 120) * 0.15;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            animationFrameId = requestAnimationFrame(animateCanvas);
+        }
+
+        if (canvas) {
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
+            resizeCanvas();
+            initParticles();
+            if (!prefersReducedMotion) animateCanvas();
+        }
+
+        // -------------------------------------------------------------
+        // 2. CURSOR FOLLOW LIGHT (DESKTOP)
+        // -------------------------------------------------------------
+        const cursorGlow = document.getElementById('cursor-glow');
+        if (cursorGlow && !prefersReducedMotion) {
+            window.addEventListener('mousemove', (e) => {
+                cursorGlow.style.left = `${e.clientX}px`;
+                cursorGlow.style.top = `${e.clientY}px`;
+            });
+        }
+
+        // -------------------------------------------------------------
+        // 3. STICKY NAVBAR GLASS EFFECT & SCROLL PROGRESS
+        // -------------------------------------------------------------
+        const navbar = document.getElementById('navbar');
+        const navContainer = document.getElementById('nav-container');
+        const scrollProgress = document.getElementById('scroll-progress');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            if (scrollProgress) {
+                scrollProgress.style.width = `${scrollPercent}%`;
+            }
+
+            if (scrollTop > 50) {
+                navContainer.classList.add('glass-card', 'shadow-2xl', 'border-slate-800');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navContainer.classList.remove('glass-card', 'shadow-2xl', 'border-slate-800');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // -------------------------------------------------------------
+        // 4. SCROLL REVEAL OBSERVER
+        // -------------------------------------------------------------
+        const reveals = document.querySelectorAll('.reveal');
+
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            reveals.forEach(el => revealObserver.observe(el));
+        } else {
+            reveals.forEach(el => el.classList.add('active'));
+        }
+
+        // -------------------------------------------------------------
+        // 5. MOBILE MENU DRAWER TOGGLE
+        // -------------------------------------------------------------
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.className = 'fa-solid fa-bars text-xl';
+                } else {
+                    menuIcon.className = 'fa-solid fa-xmark text-xl text-cyan-400';
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.className = 'fa-solid fa-bars text-xl';
+                });
+            });
+        }
+
+        // -------------------------------------------------------------
+        // 6. INTERACTIVE CATEGORIES SHOWCASE
+        // -------------------------------------------------------------
+        const categoryData = {
+            writing: {
+                title: "✍️ AI Writing & Copywriting",
+                desc: "Discover advanced LLM prompt structures, AI drafting assistants, humanization tricks, and SEO text tools."
+            },
+            images: {
+                title: "🎨 AI Image Generation & Editing",
+                desc: "Master Midjourney v6 parameters, Stable Diffusion ControlNets, DALL-E 3 prompting, and lightning upscale engines."
+            },
+            video: {
+                title: "🎬 AI Video Creation & Editing",
+                desc: "Explore generative video tools like Runway Gen-2, Sora updates, Pika Labs, and AI voice synchronization."
+            },
+            coding: {
+                title: "💻 AI Code Assistants & Dev Tools",
+                desc: "Boost engineering output with Claude 3.5 Sonnet, Cursor IDE shortcuts, GitHub Copilot setups, and automated testing."
+            },
+            education: {
+                title: "🧠 AI Education & Research",
+                desc: "Summarize research papers in seconds, construct interactive tutors, and organize complex math & science problems."
+            },
+            productivity: {
+                title: "⚡ AI Productivity & Workflow Automation",
+                desc: "Automate calendar routines, email drafts, meeting summaries, and Notion AI knowledge databases."
+            },
+            business: {
+                title: "💼 AI Business & Strategy",
+                desc: "Analyze pitch decks, generate market competitor reports, and automate customer support pipelines effortlessly."
+            },
+            automation: {
+                title: "🤖 AI Autonomous Agents",
+                desc: "Deploy AutoGPT, CrewAI agent networks, and custom Telegram bots built specifically for workflow optimization."
+            }
+        };
+
+        const categoryCards = document.querySelectorAll('.category-card');
+        const previewTitle = document.getElementById('preview-title');
+        const previewDesc = document.getElementById('preview-desc');
+
+        categoryCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const cat = card.getAttribute('data-category');
+                if (cat && categoryData[cat] && previewTitle && previewDesc) {
+                    previewTitle.innerText = categoryData[cat].title;
+                    previewDesc.innerText = categoryData[cat].desc;
+
+                    categoryCards.forEach(c => c.classList.remove('border-cyan-400', 'bg-slate-800/80'));
+                    card.classList.add('border-cyan-400', 'bg-slate-800/80');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
